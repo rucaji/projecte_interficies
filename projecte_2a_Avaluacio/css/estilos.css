@@ -1,0 +1,115 @@
+video {
+    width: 100%;
+    height: auto;
+}
+
+#contenedor_principal_multimedia {
+    padding-top: 20px;
+}
+
+img {
+    width: 100%;
+    /* Hace que la imagen ocupe el 100% del ancho de su contenedor. */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio disponible, recortando si es necesario. */
+}
+
+#vistasCarousel,
+#contenedor_botones,
+#vistasAccordion,
+#vistasCard,
+#vistasCard_multimedia {
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+h1,
+button,
+a {
+    font-family: "Segoe UI";
+    font-weight: bold;
+}
+
+
+.carousel,
+.accordion,
+img,
+.card {
+    border: 1px solid #000;
+    /* Define el borde */
+    box-shadow: 4px 8px 16px rgba(22, 22, 22, 0.5);
+    /* Agrega la sombra */
+}
+
+.card {
+    padding: 15px;
+}
+
+
+.btn-dark {
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: large;
+    font-weight: bold;
+}
+#biografia {
+    padding-top: 30px;
+    padding-bottom: 60px; 
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 16px;
+    line-height: 2.5;
+    margin: 0px;
+}
+
+h4,
+p {
+    font-size: large;
+}
+
+@media (min-width: 768px) {
+
+    h4,
+    p {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 992px) {
+
+    h4,
+    p {
+        font-size: small;
+    }
+}
+@keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .imagen-giratoria {
+    animation: girar 10s linear infinite;
+    
+  }
+  .imagen-desplaza:hover {
+    animation: desplazar 5s ease-in-out infinite alternate;
+  }
+  @keyframes desplazar {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200px); 
+    }
+  }
+  

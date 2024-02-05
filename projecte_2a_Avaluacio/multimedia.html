@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Oldfield tribute</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/colores.css">
+    <script>
+        window.onload = function () {
+            const botonVerTubular = document.getElementById("verTubular");
+            const botonVerIncantations = document.getElementById("verIncantations");
+            const botonVerTubular3 = document.getElementById("verTubular3");
+            const botonVerVoyager = document.getElementById("verVoyager");
+            const botonVerSongs = document.getElementById("verSongs");
+            const botonVerIslands = document.getElementById("verIslands");
+
+            botonVerTubular.addEventListener('click', function () {
+                document.getElementById('im_tubular').innerHTML = '<video controls autoplay>' +
+                    '<source src="./videos/tubular.webm" type="video/webm">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+            });
+            botonVerIncantations.addEventListener('click', function () {
+                document.getElementById('im_incantations').innerHTML = '<video controls autoplay>' +
+                    '<source src="./videos/incantations.webm" type="video/webm">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+            });
+            botonVerTubular3.addEventListener('click', function () {
+                document.getElementById('im_tubular3').innerHTML = '<video controls autoplay>' +
+                    '<source src="./videos/tubular3.webm" type="video/webm">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+            });
+            botonVerVoyager.addEventListener('click', function () {
+                document.getElementById('im_voyager').innerHTML = '<video controls autoplay>' +
+                    '<source src="./videos/voyager.webm" type="video/webm">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+            });
+            botonVerSongs.addEventListener('click', function () {
+                document.getElementById('im_songs').innerHTML = '<video controls autoplay>' +
+                    '<source src="./videos/songs.webm" type="video/webm">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+            });
+            botonVerIslands.addEventListener('click', function () {
+                document.getElementById('im_islands').innerHTML = '<video controls autoplay>' +
+                    '<source src="./videos/islands.webm" type="video/webm">' +
+                    'Your browser does not support the video tag.' +
+                    '</video>';
+            });
+
+            const botonOirTubular = document.getElementById("oirTubular");
+            const botonOirIncantations = document.getElementById("oirIncantations");
+            const botonOirTubular3 = document.getElementById("oirTubular3");
+            const botonOirVoyager = document.getElementById("oirVoyager");
+            const botonOirSongs = document.getElementById("oirSongs");
+            const botonOirIslands = document.getElementById("oirIslands");
+
+            botonOirTubular.addEventListener('click', function () {
+                document.getElementById('aud_tubular').innerHTML = '<audio controls autoplay>' +
+                    '<source src="./audio/tubular.mp3" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.' +
+                    '</audio>';
+            });
+            botonOirIncantations.addEventListener('click', function () {
+                document.getElementById('aud_incantations').innerHTML = '<audio controls autoplay>' +
+                    '<source src="./audio/incantations.mp3" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.' +
+                    '</audio>';
+            });
+            botonOirTubular3.addEventListener('click', function () {
+                document.getElementById('aud_tubular3').innerHTML = '<audio controls autoplay>' +
+                    '<source src="./audio/tubular3.mp3" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.' +
+                    '</audio>';
+            });
+            botonOirVoyager.addEventListener('click', function () {
+                document.getElementById('aud_voyager').innerHTML = '<audio controls autoplay>' +
+                    '<source src="./audio/voyager.mp3" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.' +
+                    '</audio>';
+            });
+            botonOirSongs.addEventListener('click', function () {
+                document.getElementById('aud_songs').innerHTML = '<audio controls autoplay>' +
+                    '<source src="./audio/songs.mp3" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.' +
+                    '</audio>';
+            });
+            botonOirIslands.addEventListener('click', function () {
+                document.getElementById('aud_islands').innerHTML = '<audio controls autoplay>' +
+                    '<source src="./audio/islands.mp3" type="audio/mp3">' +
+                    'Your browser does not support the audio tag.' +
+                    '</audio>';
+            });
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center py-3 bg-dark text-white">
+        <!-- py-3 = padding en el eje y -->
+        <h1 class="mx-auto">Mike Oldfield Tribute</h1> <!-- mx-auto = margin en eje x, para centrar-->
+        <button type="button" class="btn btn-success">
+            Login
+        </button>
+        <button type="button" class="btn btn-primary">
+            Notificaciones <span class="badge text-bg-secondary"></span>
+        </button>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <!-- Botón de menú desplegable para pantallas pequeñas -->
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Contenido del navbar que se colapsará en pantallas pequeñas -->
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="navbar-nav d-flex justify-content-around w-100">
+                    <a class="nav-link" href="inicio.html">Inicio</a>
+                    <a class="nav-link" href="multimedia.html">Multimedia</a>
+                    <a class="nav-link" href="biografia.html">Biografia</a>
+                    <a class="nav-link" href="discografia.html">Discografia</a>
+                    
+                </div>
+            </div>
+            <img class="imagen-giratoria" src="./imagenes/28.png" alt="logo" style="width: 50px;height: 50px;border: none;margin-right: 60px;">
+        </div>
+    </nav>
+
+    <div id="contenedor_principal_multimedia">
+        <div id="vistasCard_multimedia" class="row">
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="im_tubular">
+                    <img src="./imagenes/1.png" class="card-img-top" alt="Portada Tubular Bells">
+                </div>
+                <div id="aud_tubular"></div>
+                <div class="card-body">
+                    <h2 class="card-title">Tubular Bells</h2>
+                    <p class="card-text">Es el primer disco de estudio del
+                        compositor y músico británico Mike Oldfield, lanzado el 25 de mayo de 1973.</p>
+                    <button id="oirTubular" type="button">Escuchar</button>
+                    <button id="verTubular" type="button">Ver video</button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="im_incantations">
+                    <img src="./imagenes/19.png" class="card-img-top" alt="Portada Incantations">
+                </div>
+                <div id="aud_incantations"></div>
+                <div class="card-body">
+                    <h2 class="card-title">Incantations</h2>
+                    <p class="card-text">Incantations es el cuarto álbum de
+                        estudio del músico.</p>
+                    <button id="oirIncantations" type="button">Escuchar</button>
+                    <button id="verIncantations" type="button">Ver video</button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="im_tubular3">
+                    <img src="./imagenes/7.png" class="card-img-top" alt=" Portada Tubular Bells III">
+                </div>
+                <div id="aud_tubular3"></div>
+                <div class="card-body">
+                    <h2 class="card-title">Tubular Bells III</h2>
+                    <p class="card-text">Tubular Bells III es el 18º álbum de
+                        Mike Oldfield</p>
+                    <button id="oirTubular3" type="button">Escuchar</button>
+                    <button id="verTubular3" type="button">Ver video</button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="im_voyager">
+                    <img src="./imagenes/10.png" class="card-img-top" alt="Portada Voyager">
+                </div>
+                <div id="aud_voyager"></div>
+                <div class="card-body">
+                    <h2 class="card-title">Voyager</h2>
+                    <p class="card-text">Voyager es el decimoséptimo álbum de
+                        Mike Oldfield , lanzado en 1996 por Warner.</p>
+                    <button id="oirVoyager" type="button">Escuchar</button>
+                    <button id="verVoyager" type="button">Ver video</button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="im_songs">
+                    <img src="./imagenes/13.png" class="card-img-top" alt="Portada de Songs of distant earth">
+                </div>
+                <div id="aud_songs"></div>
+                <div class="card-body">
+                    <h2 class="card-title">Songs of distant earth</h2>
+                    <p class="card-text">El título del álbum hace referencia a
+                        una novela original de Arthur C. Clarke.</p>
+                    <button id="oirSongs" type="button">Escuchar</button>
+                    <button id="verSongs" type="button">Ver video</button>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="im_islands">
+                    <img src="./imagenes/22.png" class="card-img-top" alt="Portada de Islands">
+                </div>
+                <div id="aud_islands"></div>
+                <div class="card-body">
+                    <h2 class="card-title">Islands</h2>
+                    <p class="card-text">Islands es el decimoprimer álbum de
+                        estudio de Mike Oldfield.</p>
+                    <button id="oirIslands" type="button">Escuchar</button>
+                    <button id="verIslands" type="button">Ver video</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 ">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-auto">
+                    <p class="mb-0">Proyecto DIW Rufino Camarena - © 2024 Siguenos en <u>facebook</u> y en
+                        <u>instagram</u>
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-secondary">
+                        Contactar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

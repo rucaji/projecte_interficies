@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Oldfield tribute</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/colores.css">
+    <script>
+        window.onload = function () {
+            const botonCarousel = document.getElementById("carusel");
+            const botonAccordion = document.getElementById("accord");
+            const botonCard = document.getElementById("cards");
+
+            botonCarousel.addEventListener('click', function () {
+                document.getElementById('vistasCarousel').style.display = "flex";
+                document.getElementById('vistasAccordion').style.display = "none";
+                document.getElementById('vistasCard').style.display = "none";
+            });
+            botonAccordion.addEventListener('click', function () {
+                document.getElementById('vistasCarousel').style.display = "none";
+                document.getElementById('vistasAccordion').style.display = "flex";
+                document.getElementById('vistasCard').style.display = "none";
+            });
+            botonCard.addEventListener('click', function () {
+                document.getElementById('vistasCarousel').style.display = "none";
+                document.getElementById('vistasAccordion').style.display = "none";
+                document.getElementById('vistasCard').style.display = "flex";
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center py-3 bg-dark text-white">
+        <!-- py-3 = padding en el eje y -->
+        <img class="imagen-giratoria" src="./imagenes/28.png" alt="logo" style="width: 50px;height: 50px;border: none;margin-left: 60px;">
+        <h1 class="mx-auto">Mike Oldfield Tribute</h1> <!-- mx-auto = margin en eje x, para centrar-->
+        <button type="button" class="btn btn-success">
+            Login
+        </button>
+        <button type="button" class="btn btn-secondary">
+            Notificaciones <span class="badge text-bg-secondary"></span>
+        </button>
+    </header>
+
+    <nav  class="navbar navbar-expand-md navbar-dark colorNav">
+        <div class="container-fluid">
+            <!-- Botón de menú desplegable para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Contenido del navbar que se colapsará en pantallas pequeñas -->
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="navbar-nav d-flex justify-content-around w-100">
+                    <a class="nav-link" href="inicio.html">Inicio</a>
+                    <a class="nav-link" href="multimedia.html">Multimedia</a>
+                    <a class="nav-link" href="biografia.html">Biografia</a>
+                    <a class="nav-link" href="discografia.html">Discografia</a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="contenedor_principal">
+        <div id="contenedor_botones" class="container-fluid px-5 py-4">
+            <button id="carusel" type="button" class="btn btn-dark ">
+                vista carousel
+            </button>
+            <button id="accord" type="button" class="btn btn-dark " >
+                vista accordion
+            </button>
+            <button id="cards" type="button" class="btn btn-dark ">
+                vista card
+            </button>
+            <br><br>
+        </div>
+        <div id="vistasCarousel" class="row">
+
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/1.png" class="d-block w-100" alt="Portada Tubular Bells">
+                            <div class="carousel-caption ">
+                                <h4 style="color: black;">Portada del disco</4>
+                                    <p >Es el primer disco de estudio del
+                                        compositor y músico británico Mike Oldfield, lanzado el 25 de mayo de 1973.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/2.png" class="d-block w-100" alt="Contraportada Tubular Bells">
+                            <div class="carousel-caption ">
+                                <h2 style="color: black;">Contraportada del disco</h2>
+                                <p style="color: black;">Se compone de dos pistas en
+                                    su mayoría instrumentales.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/3.png" class="d-block w-100" alt="Imagen del disco">
+                            <div class="carousel-caption ">
+                                <h2 style="color: black;">Imagenes</h2>
+                                <p style="color: black;">La grabación de Tubular Bells se realizó en el estudio The
+                                    Manor, una mansión estudio situada en Oxfordshire</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="carousel_2" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_2" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel_2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel_2" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/19.png" class="d-block w-100" alt="Portada Incantations">
+                            <div class="carousel-caption ">
+                                <h4 >Portada del disco</4>
+                                    <p >Incantations es el cuarto álbum de
+                                        estudio del músico.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/20.png" class="d-block w-100" alt="Contraportada Incantations">
+                            <div class="carousel-caption ">
+                                <h2>Contraportada del disco</h2>
+                                <p >Durante la composición de Incantations,
+                                    Oldfield se inspiró en los poemas "Hiawatha"</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/21.png" class="d-block w-100" alt="Imagen del disco">
+                            <div class="carousel-caption ">
+                                <h2>Imagenes</h2>
+                                <p>En 2000 Virgin Records reeditó el álbum en una versión remasterizada </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="carousel_3" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_3" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel_3" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel_3" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/7.png" class="d-block w-100" alt="Portada Tubular Bells III">
+                            <div class="carousel-caption ">
+                                <h4 style="color: black;">Portada del disco</4>
+                                    <p >Tubular Bells III es el 18º álbum de
+                                        Mike Oldfield</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/8.png" class="d-block w-100" alt="Contraportada Tubular Bells III">
+                            <div class="carousel-caption ">
+                                <h2 style="color: black;">Contraportada del disco</h2>
+                                <p style="color: black;">Mientras lo componía,
+                                    Oldfield estaba viviendo en Ibiza</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/9.png" class="d-block w-100" alt="Imagen del disco">
+                            <div class="carousel-caption ">
+                                <h2 style="color: black;">Imagenes</h2>
+                                <p style="color: black;">Una primera versión de "Man in the rain" se escribió alrededor
+                                    del éxito de 1983 Moonlight Shadow</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_3"
+                        data-bs-slide="prev" >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="carousel_4" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_4" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel_4" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel_4" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/10.png" class="d-block w-100" alt="Portada Voyager">
+                            <div class="carousel-caption ">
+                                <h4 style="color: black;">Portada del disco</4>
+                                    <p ">Voyager es el decimoséptimo álbum de
+                                        Mike Oldfield , lanzado en 1996 por Warner.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/11.png" class="d-block w-100" alt="Contraportada Voyager">
+                            <div class="carousel-caption ">
+                                <h2 style="color: black;">Contraportada del disco</h2>
+                                <p style="color: black;">La música de este álbum es la
+                                    más cercana a la música celta que Mike Oldfield ha compuesto.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/12.png" class="d-block w-100" alt="Imagen del disco">
+                            <div class="carousel-caption ">
+                                <h2 style="color: black;">Imagenes</h2>
+                                <p style="color: black;">The Hero" es una pieza escocesa escrita originalmente por James
+                                    Scott Skinner en 1903</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_4"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_4"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="carousel_5" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_5" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel_5" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel_5" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/13.png" class="d-block w-100" alt="Portada de Songs of distant earth">
+                            <div class="carousel-caption ">
+                                <h4 >Portada del disco</4>
+                                    <p >El título del álbum hace referencia a
+                                        una novela original de Arthur C. Clarke</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/14.png" class="d-block w-100"
+                                alt="Contraportada de Songs of distant earth">
+                            <div class="carousel-caption ">
+                                <h2>Contraportada del disco</h2>
+                                <p >El álbum está considerado por ser uno de
+                                    los mejores según sus seguidores</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/15.png" class="d-block w-100" alt="Imagen del disco">
+                            <div class="carousel-caption ">
+                                <h2>Imagenes</h2>
+                                <p>Let There Be Light alcanzó los más altos puestos en las listas de venta de la época.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_5"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_5"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <div id="carousel_6" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_6" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel_6" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel_6" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/22.png" class="d-block w-100" alt="Portada de Islands">
+                            <div class="carousel-caption ">
+                                <h4 >Portada del disco</4>
+                                    <p >Islands es el decimoprimer álbum de
+                                        estudio de Mike Oldfield.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/23.png" class="d-block w-100" alt="Contraportada Islands">
+                            <div class="carousel-caption ">
+                                <h2>Contraportada del disco</h2>
+                                <p >El álbum incluyó el sencillo "Islands",
+                                    cantado por Bonnie Tyler,</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/24.png" class="d-block w-100" alt="Imagen del disco">
+                            <div class="carousel-caption ">
+                                <h2>Imagenes</h2>
+                                <p>Los temas de "Islands" inspiraron la filmación de "The Wind Chimes"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_6"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_6"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="vistasAccordion" class="row" style="display: none;">
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/1.png" alt="Portada Tubular Bells" class="img-fluid">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Portada
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Es el primer disco de estudio del compositor y músico británico Mike Oldfield, lanzado
+                                el 25 de mayo de 1973.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Contraportada
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Se compone de dos pistas en su mayoría instrumentales.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Imagenes
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                La grabación de Tubular Bells se realizó en el estudio The Manor, una mansión estudio
+                                situada en Oxfordshire
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/19.png" alt="Portada Incantations" class="img-fluid">
+                <div class="accordion" id="accordion_2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne_2" aria-expanded="true" aria-controls="collapseOne_2">
+                                Portada
+                            </button>
+                        </h2>
+                        <div id="collapseOne_2" class="accordion-collapse collapse show" data-bs-parent="#accordion_2">
+                            <div class="accordion-body">
+                                Incantations es el cuarto álbum de
+                                estudio del músico.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo_2" aria-expanded="false" aria-controls="collapseTwo_2">
+                                Contraportada
+                            </button>
+                        </h2>
+                        <div id="collapseTwo_2" class="accordion-collapse collapse" data-bs-parent="#accordion_2">
+                            <div class="accordion-body">
+                                Durante la composición de Incantations,
+                                Oldfield se inspiró en los poemas "Hiawatha"
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree_2" aria-expanded="false" aria-controls="collapseThree_2">
+                                Imagenes
+                            </button>
+                        </h2>
+                        <div id="collapseThree_2" class="accordion-collapse collapse" data-bs-parent="#accordion_2">
+                            <div class="accordion-body">
+                                En 2000 Virgin Records reeditó el álbum en una versión remasterizada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/7.png" alt="Portada Tubular Bells III" class="img-fluid">
+                <div class="accordion" id="accordion_3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne_3" aria-expanded="true" aria-controls="collapseOne_3">
+                                Portada
+                            </button>
+                        </h2>
+                        <div id="collapseOne_3" class="accordion-collapse collapse show" data-bs-parent="#accordion_3">
+                            <div class="accordion-body">
+                                Tubular Bells III es el 18º álbum de
+                                Mike Oldfield
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo_3" aria-expanded="false" aria-controls="collapseTwo_3">
+                                Contraportada
+                            </button>
+                        </h2>
+                        <div id="collapseTwo_3" class="accordion-collapse collapse" data-bs-parent="#accordion_3">
+                            <div class="accordion-body">
+                                Mientras lo componía,
+                                Oldfield estaba viviendo en Ibiza
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree_3" aria-expanded="false" aria-controls="collapseThree_3">
+                                Imagenes
+                            </button>
+                        </h2>
+                        <div id="collapseThree_3" class="accordion-collapse collapse" data-bs-parent="#accordion_3">
+                            <div class="accordion-body">
+                                Una primera versión de "Man in the rain" se escribió alrededor
+                                del éxito de 1983 Moonlight Shadow
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/10.png" alt="Portada Voyager" class="img-fluid">
+                <div class="accordion" id="accordion_4">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne_4" aria-expanded="true" aria-controls="collapseOne_4">
+                                Portada
+                            </button>
+                        </h2>
+                        <div id="collapseOne_4" class="accordion-collapse collapse show" data-bs-parent="#accordion_4">
+                            <div class="accordion-body">
+                                Voyager es el decimoséptimo álbum de
+                                Mike Oldfield , lanzado en 1996 por Warner.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo_4" aria-expanded="false" aria-controls="collapseTwo_4">
+                                Contraportada
+                            </button>
+                        </h2>
+                        <div id="collapseTwo_4" class="accordion-collapse collapse" data-bs-parent="#accordion_4">
+                            <div class="accordion-body">
+                                La música de este álbum es la
+                                más cercana a la música celta que Mike Oldfield ha compuesto.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree_4" aria-expanded="false" aria-controls="collapseThree_4">
+                                Imagenes
+                            </button>
+                        </h2>
+                        <div id="collapseThree_4" class="accordion-collapse collapse" data-bs-parent="#accordion_4">
+                            <div class="accordion-body">
+                                The Hero" es una pieza escocesa escrita originalmente por James
+                                Scott Skinner en 1903
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/13.png" alt="Portada de Songs of distant earth" class="img-fluid">
+                <div class="accordion" id="accordion_5">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne_5" aria-expanded="true" aria-controls="collapseOne_5">
+                                Portada
+                            </button>
+                        </h2>
+                        <div id="collapseOne_5" class="accordion-collapse collapse show" data-bs-parent="#accordion_5">
+                            <div class="accordion-body">
+                                El título del álbum hace referencia a
+                                una novela original de Arthur C. Clarke
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo_5" aria-expanded="false" aria-controls="collapseTwo_5">
+                                Contraportada
+                            </button>
+                        </h2>
+                        <div id="collapseTwo_5" class="accordion-collapse collapse" data-bs-parent="#accordion_5">
+                            <div class="accordion-body">
+                                El álbum está considerado por ser uno de
+                                los mejores según sus seguidores
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree_5" aria-expanded="false" aria-controls="collapseThree_5">
+                                Imagenes
+                            </button>
+                        </h2>
+                        <div id="collapseThree_5" class="accordion-collapse collapse" data-bs-parent="#accordion_5">
+                            <div class="accordion-body">
+                                Let There Be Light alcanzó los más altos puestos en las listas de venta de la época.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/22.png" alt="Portada de Islands" class="img-fluid">
+                <div class="accordion" id="accordion_6">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne_6" aria-expanded="true" aria-controls="collapseOne_6">
+                                Portada
+                            </button>
+                        </h2>
+                        <div id="collapseOne_6" class="accordion-collapse collapse show" data-bs-parent="#accordion_6">
+                            <div class="accordion-body">
+                                Islands es el decimoprimer álbum de
+                                estudio de Mike Oldfield.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo_6" aria-expanded="false" aria-controls="collapseTwo_6">
+                                Contraportada
+                            </button>
+                        </h2>
+                        <div id="collapseTwo_6" class="accordion-collapse collapse" data-bs-parent="#accordion_6">
+                            <div class="accordion-body">
+                                El álbum incluyó el sencillo "Islands",
+                                cantado por Bonnie Tyler
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree_6" aria-expanded="false" aria-controls="collapseThree_6">
+                                Imagenes
+                            </button>
+                        </h2>
+                        <div id="collapseThree_6" class="accordion-collapse collapse" data-bs-parent="#accordion_6">
+                            <div class="accordion-body">
+                                Los temas de "Islands" inspiraron la filmación de "The Wind Chimes"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="vistasCard" class="row" style="display: none">
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/1.png" class="card-img-top" alt="Portada Tubular Bells">
+                <div class="card-body">
+                    <h2 class="card-title">Tubular Bells</h2>
+                    <p class="card-text">Es el primer disco de estudio del
+                        compositor y músico británico Mike Oldfield, lanzado el 25 de mayo de 1973.</p>
+                    
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/19.png" class="card-img-top" alt="Portada Incantations">
+                <div class="card-body">
+                    <h2 class="card-title">Incantations</h2>
+                    <p class="card-text">Incantations es el cuarto álbum de
+                        estudio del músico.</p>
+                    
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/7.png" class="card-img-top" alt=" Portada Tubular Bells III">
+                <div class="card-body">
+                    <h2 class="card-title">Tubular Bells III</h2>
+                    <p class="card-text">Tubular Bells III es el 18º álbum de
+                        Mike Oldfield</p>
+                    
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/10.png" class="card-img-top" alt="Portada Voyager">
+                <div class="card-body">
+                    <h2 class="card-title">Voyager</h2>
+                    <p class="card-text">Voyager es el decimoséptimo álbum de
+                        Mike Oldfield , lanzado en 1996 por Warner.</p>
+                    
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/13.png" class="card-img-top" alt="Portada de Songs of distant earth">
+                <div class="card-body">
+                    <h2 class="card-title">Songs of distant earth</h2>
+                    <p class="card-text">El título del álbum hace referencia a
+                        una novela original de Arthur C. Clarke.</p>
+                    
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 text-center mb-4">
+                <img src="./imagenes/22.png" class="card-img-top" alt="Portada de Islands">
+                <div class="card-body">
+                    <h2 class="card-title">Islands</h2>
+                    <p class="card-text">Islands es el decimoprimer álbum de
+                        estudio de Mike Oldfield.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    
+    <footer class="bg-dark text-white text-center py-3 ">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-auto">
+                    <p class="mb-0">Proyecto DIW Rufino Camarena - © 2024 Siguenos en <u>facebook</u> y en
+                        <u>instagram</u></p>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-secondary">
+                        Contactar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

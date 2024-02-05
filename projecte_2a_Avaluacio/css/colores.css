@@ -1,0 +1,23 @@
+video, img {
+  width: 100%;
+  border: 1px solid #000;
+  box-shadow: 4px 8px 16px rgba(22, 22, 22, 0.5); }
+
+#contenedor_principal,
+#contenedor_principal_multimedia,
+#contenedor-biografia,
+#contenedor-discografia {
+  background-color: #9f9fdd; }
+
+.card,
+.accordion-collapse,
+.accordion-button {
+  background-color: #cdcde4; }
+
+a:hover {
+  background: radial-gradient(#b4b4be, #443f3f); }
+
+.colorNav {
+  background-color: #443f3f; }
+
+/*# sourceMappingURL=colores.css.map */

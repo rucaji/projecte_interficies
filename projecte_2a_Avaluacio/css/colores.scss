@@ -1,0 +1,35 @@
+$color-fondo-principal: rgb(159, 159, 221);
+$color-fondo-acordeon-y-botones: rgb(205, 205, 228);
+$color-fondo-nav: rgb(68, 63, 63);
+$color-borde: #000;
+$color-sombra: rgba(22, 22, 22, 0.5);
+$color-hover-inicio: rgb(180, 180, 190);
+$color-hover-final: rgb(68, 63, 63);
+
+@mixin sombra {
+    border: 1px solid $color-borde;
+    box-shadow: 4px 8px 16px $color-sombra;
+  }
+  video, img {
+    width: 100%;
+    @include sombra;
+  }
+  #contenedor_principal, 
+#contenedor_principal_multimedia, 
+#contenedor-biografia, 
+#contenedor-discografia {
+  background-color: $color-fondo-principal;
+}
+.card, 
+.accordion-collapse, 
+.accordion-button {
+  background-color: $color-fondo-acordeon-y-botones;
+}
+a:hover {
+    background: radial-gradient($color-hover-inicio, $color-hover-final);
+  }
+  
+  // Clases con colores y estilos específicos
+  .colorNav {
+    background-color: $color-fondo-nav;
+  }
